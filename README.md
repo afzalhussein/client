@@ -1,6 +1,7 @@
 # Checkout 51 Client
 
 This project is a React frontend for the Checkout 51 offers app.
+![image](https://github.com/user-attachments/assets/eba7aeca-3b63-4657-88a5-560d315745af)
 
 ## Available Scripts
 
