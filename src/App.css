@@ -46,3 +46,73 @@
   object-fit: cover;
   border-bottom: 8px;
 }
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.glass-button {
+  position: relative;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Wavy animation effect */
+.glass-button::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 10%, transparent 40%);
+  animation: wave 1.5s infinite ease-in-out;
+  transform: translateY(0) rotate(0deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.glass-button:hover::before {
+  opacity: 1;
+}
+
+.glass-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(100%) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(50%) rotate(10deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-10deg);
+  }
+}
+
+.card-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding:10px;
+}
