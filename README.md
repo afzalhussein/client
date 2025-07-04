@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Checkout 51 Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React frontend for the Checkout 51 offers app.
 
 ## Available Scripts
 
@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
@@ -39,11 +39,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## API Proxy
+
+This client is configured to proxy API requests to the backend server.  
+Make sure your backend is running on the same port as specified in the `proxy` field of `package.json` (default: `http://localhost:3000`).
+
+## Project Structure
+
+- `src/components/OfferCard.js` – Displays a single offer card.
+- `src/services/api.js` – Fetches offers from the backend API.
+
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React documentation](https://reactjs.org/)
 
 ### Code Splitting
 
